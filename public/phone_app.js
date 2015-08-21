@@ -41,10 +41,9 @@ $(document).ready(function() {
             $("#rock").show();
         }
     });
-    $( window ).orientationchange(90);
 
-    /*screen.orientation.lock("landscape");
-    screen.orientation.addEventListener("change", function(){
+    screen.orientation.lock("landscape");
+    /*screen.orientation.addEventListener("change", function(){
         if(screen.orientation.type == "landscape-primary")
         {
             "undefined" != typeof console && console.log("send change color command");
