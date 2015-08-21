@@ -17,26 +17,26 @@ io.sockets.on('connection', function (socket) {
  
     // 偵聽 send 事件
     socket.on('send', function (data) {
-        console.log("data: %j", data);
+        //console.log("data: %j", data);
         // 然後我們依據 data.act 做不同的動作
         switch ( data.act )
         {
             // 這個是使用者打開手機網頁後發生的事件
             case "enter":
                 io.sockets.emit('action', data);
-                console.log("Sending getEnter");
+                //console.log("Sending getEnter");
                 break;
 
             // 這個是使用者在手機網頁中點擊按鈕，讓電腦網頁背景變色的事件
             case "primary":
                 io.sockets.emit('action', data);
-                console.log("Sending primary");
+                //console.log("Sending primary");
                 break;
 
             // 這個是使用者在手機網頁中點擊按鈕，讓電腦網頁背景變色的事件
             case "secondary":
                 io.sockets.emit('action', data);
-                console.log("Sending secondary");
+                //console.log("Sending secondary");
                 break;
         }
  
