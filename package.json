@@ -1,6 +1,9 @@
 {
   "name": "crazymusic",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "This example is about interaction between mobile and pc web",
+  "main": "server.js",
+  "author": "MichaelQQ",
   "dependencies": {
     "express": "~4.9.x",
     "socket.io": "1.3.6"
