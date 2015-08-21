@@ -37,7 +37,7 @@ $(document).ready(function(){
 
     var key = NewGuid();
     //console.log(key);
-    $("#qrcode").append("<img src='https://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://crazymusic.herokuapp.com/public/phone.html?key=" + key + "&choe=UTF-8' />");
+    $("#qrcode").append("<img src='http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl=http://crazymusic.herokuapp.com/public/phone.html?key=" + key + "&choe=UTF-8' />");
 
     // NodeJS Server
     var nodejs_server = "crazymusic.herokuapp.com/";
