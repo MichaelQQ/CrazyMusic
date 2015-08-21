@@ -19,7 +19,31 @@ $(document).ready(function() {
         act: "enter"
     });
 
-    screen.orientation.lock("landscape");
+    $( window ).on( "orientationchange", function( event ) {
+        if(window.orientation == 90)
+        {
+            "undefined" != typeof console && console.log("send change color command");
+            socket.emit("send", {
+                key: getUrlVars()["key"],
+                act: "primary"
+            });
+            $("#classic").show();
+            $("#rock").hide();
+        }
+        else if(window.orientation == -90)
+        {
+            "undefined" != typeof console && console.log("send change color command");
+            socket.emit("send", {
+                key: getUrlVars()["key"],
+                act: "secondary"
+            });
+            $("#classic").hide();
+            $("#rock").show();
+        }
+    });
+    $( window ).orientationchange(90);
+
+    /*screen.orientation.lock("landscape");
     screen.orientation.addEventListener("change", function(){
         if(screen.orientation.type == "landscape-primary")
         {
@@ -41,5 +65,5 @@ $(document).ready(function() {
             $("#classic").hide();
             $("#rock").show();
         }
-    });
+    });*/
 });
