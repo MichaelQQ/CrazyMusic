@@ -51,6 +51,7 @@ $(document).ready(function(){
             // 當擁有特定 KEY 的使用者打開手機版網頁，觸發 enter 事件，就會將 qrcode 隱藏，並秀出一張圖
             case key + "_enter":
                 $("#qrcode").hide();
+                $("#footer").hide();
                 $("#main").show();
                 player1.playVideo();
                 player2.playVideo();
